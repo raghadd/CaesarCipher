@@ -7,8 +7,8 @@ package caesarcipher;
 
 /**
  *
- * @author Raghad Salem Alafeef
- *         1508190
+ * @author Raghad 
+ *         
  */
 import java.util.*;
 import java.io.*;
@@ -70,9 +70,9 @@ public class CaesarCipher {
         for (int i = 0; i < ct.length(); i++) {
             if (ct.charAt(i) >= 'a' && ct.charAt(i) <= 'z') {
                 position = ct.charAt(i) - 97; // find alphabetic position
-                position -= (key % 26);  // find a modulus keu then substract
-                if (position < 0) // when substracting, the number might go below zero and revert the sequence, 
-                                    //thus add 26 to make it mod
+                position -= (key % 26);  // find a modulus key then substract
+                if (position < 0)        // when substracting, the number might go below zero and revert the sequence, 
+                                         // thus add 26 to make it mod
                     position += 26;
                 decrypted += alph[position];
             } else 
